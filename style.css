@@ -19,6 +19,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 html {
@@ -106,6 +107,22 @@ nav a:hover {
     width: auto;
     margin:0 10px;
   }
-  
- 
+  header { 
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 10px 15px 10px;
+  }
+
+  nav {
+    font-size: 0.75em;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+  }
+   
+  nav a {
+    flex: 0 0 25%;
+    text-align: center;
+  }
  }
