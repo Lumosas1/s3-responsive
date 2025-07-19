@@ -85,7 +85,7 @@ nav a:hover {
   html {
     font-size: 16px;
   }
-  
+
  .wrapper-centered {
     width: 450px; 
     margin: 0 auto;
@@ -99,8 +99,8 @@ nav a:hover {
     padding: 20px 10px 15px 10px;
     justify-content: center; 
   }
-
-  nav {
+  @media (max-width: 480px) {
+   nav {
     font-size: 0.75rem; 
     width: 100%;
     display: flex;
@@ -112,13 +112,18 @@ nav a:hover {
     width: 25%;
     text-align: center;
   }
-
+  }
   .hero {
     margin-top: 0; 
     height: 70vh; 
     padding: 10px; 
     border-radius: 0; 
+   }
+    @media (max-width: 480px) {
+  .hero {
+    height: 70vh;  
   }
+}
 
   .hero h1 {
     font-size: 2rem; 
