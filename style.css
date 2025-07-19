@@ -2,29 +2,10 @@
   *{ 
     box-sizing: border-box;
   }
-
-  Mobil tasarımı uygularken ihtiyaç duyacağınız bazı sayısal değerler:
-  - Tüm sayfa yazı büyüklüğü: 16px
-  - `header` gap değeri: 15px,
-  - `header` padding değerleri: üstten 20px, yanlardan 10px, alttan 15px
-  - Menü linkleri parentının 25% 'i,
-  - `hero` üst boşluk: 0, köşe yuvarlaklığı: 0
-  - `hero` yükseklik: ekran yüksekliğinin 70% 'i
-  - `hero` iç boşluk: 10px
-
-  Ayrıca, `h1` ve `nav` elemanlaının yazı büyüklükleri de sayfanın genel yazı büyüklüğüne endekslenerek düzeltilmeli.
-  - Başlığın yazı büyüklüğü dokümanın yazı büyüklüğünün 2 katı olmalı. 
-  - Navigasyonun yazı büyüklüğü dokümanın yazı büyüklüğünün 0.75 katı olmalı. 
-*/
-
-* {
-  box-sizing: border-box;
-
-}
-
+ 
 html {
   font-size: 20px;
-}
+ }
 
 body {
   margin: 0;
@@ -59,7 +40,7 @@ nav {
   display: flex;
   gap: 15px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 0.75rem;
 }
 
 nav a {
@@ -79,15 +60,16 @@ nav a:hover {
   height: 400px;
   background-color: #080808;
   display: flex;
-  justify-content: end;
+  justify-content: center;;
   flex-direction: column;
   padding: 40px;
   border-radius: 15px;
+  align-items: center;;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 2rem;;
   color: #70d000;
 }
 
@@ -98,40 +80,45 @@ nav a:hover {
 
 /* hero alanı bitti */
 
- @media(max-width: 500px) {
-   html {
-    font-size: 16px;
-   }
+ @media (max-width: 480px) {
+  html {
+    font-size: 16px; 
+  }
 
   .wrapper-centered {
     width: auto;
-    margin:0 10px;
+    margin: 0 10px;
+    max-width: 480px;
   }
-  header { 
+
+  header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 20px 10px 15px 10px;
+    align-items: stretch;
+    gap: 15px; 
+    padding: 20px 10px 15px 10px; 
   }
 
   nav {
-    font-size: 0.75em;
+    font-size: 0.75rem; 
     width: 100%;
-    display:flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
   }
-   
+
   nav a {
-    flex: 0 0 25%;
+    flex: 0 0 25%; 
+    width: 25%;
     text-align: center;
   }
+
   .hero {
-    margin-top: 0;
-    height: 70vh;
-    padding: 10px;
-    border-radius: 0;
+    margin-top: 0; 
+    height: 70vh; 
+    padding: 10px; 
+    border-radius: 0; 
   }
-  .hero h1 { 
-    font-size:2em;
+
+  .hero h1 {
+    font-size: 2rem; 
   }
- }
+}
